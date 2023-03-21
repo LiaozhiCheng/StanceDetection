@@ -1,0 +1,19 @@
+from flask_mongoengine import MongoEngine
+
+DB = None
+
+
+def setup(app):
+    global DB
+    DB = MongoEngine(app)
+    
+from pymongo import MongoClient
+
+DB = MongoClient('yourDatabase')
+
+
+#USER_DATA_COLLECTION = DB['User']
+#
+#USER_COLLECTION=DB['user']
+
+NEWS_COLLECTION = DB['news_raw']

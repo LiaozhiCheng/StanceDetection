@@ -1,0 +1,2 @@
+News # Media Mebsite sentiment_index
+http://127.0.0.1:5000/categ_sentiment_index_list?categ=News%20%26%20Media%20Website
