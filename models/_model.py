@@ -15,10 +15,10 @@ SENTIMENT_MODEL = BertForSequenceClassification.from_pretrained("bert-base-chine
 
 def setup():
   model_path = "stance_model/pytorch_model.bin"
-  state_dict = torch.load(model_path)
+  state_dict = torch.load(model_path, map_location=DEVICE)
   STANCE_MODEL.load_state_dict(state_dict)
   model_path = "sentiment_model/pytorch_model.bin"
-  state_dict = torch.load(model_path)
+  state_dict = torch.load(model_path, map_location=DEVICE)
   SENTIMENT_MODEL.load_state_dict(state_dict)
 
 class StanceDataset(Dataset):

@@ -4,7 +4,7 @@ from models import stance_detection
 
 stance_api = Blueprint("stance_api", __name__)
 
-@stance_api.route('/single_predict', methods=['POST'])
+@stance_api.route('/stance_detection', methods=['POST'])
 def single_predict_api():
     # Get the input data
     if request.is_json:
