@@ -122,5 +122,5 @@ for epoch in range(num_epoch):
         train_loss = train_acc = 0
 
 print("Saving Model ...")
-model_save_dir = "saved_model" 
+model_save_dir = "sentiment_model" 
 model.save_pretrained(model_save_dir)
