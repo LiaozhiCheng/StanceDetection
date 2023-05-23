@@ -11,7 +11,7 @@ from torch.utils.data import DataLoader, Dataset
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 TOKENIZER = BertTokenizerFast.from_pretrained("bert-base-chinese")
 STANCE_MODEL = BertForSequenceClassification.from_pretrained('bert-base-chinese', num_labels=3).to(DEVICE)
-SENTIMENT_MODEL = BertForSequenceClassification.from_pretrained("bert-base-chinese",num_labels=3).to(DEVICE)
+SENTIMENT_MODEL = BertForSequenceClassification.from_pretrained("ckiplab/bert-tiny-chinese",num_labels=3).to(DEVICE)
 
 def setup():
   model_path = "stance_model/pytorch_model.bin"
