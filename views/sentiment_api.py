@@ -34,7 +34,7 @@ def Categ_sentiment_index_list():
     
     news_list = access_data.Get_news(page_category=category)
     if news_list == []:
-        return jsonify({'category': category,'message': '資料集無此類別'})
+        return jsonify({'code':'5000200','category': category, 'message': '資料集無此類別'})
 
     media_news_dict = access_data.Sort_news_by_media(news_list) #key: media / value: news_list
     media_sentiment_index_list = list()
